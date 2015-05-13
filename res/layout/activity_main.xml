@@ -6,11 +6,41 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="kr.mindwing.camp_exam_sms.MainActivity" >
+    tools:context="kr.mindwing.sms.MainActivity" >
 
     <TextView
+        android:id="@+id/label_tel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="전화번호" />
+
+    <EditText
+        android:id="@+id/text_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/label_tel"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/label_tel"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/label_tel"
+        android:background="#3f00ff00"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/text_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_send"
+        android:layout_below="@id/text_tel"
+        android:layout_marginTop="10dp"
+        android:background="#3f0000ff"
+        android:gravity="top|left" />
+
+    <Button
+        android:id="@id/button_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="보내기" />
 
 </RelativeLayout>
